@@ -4,9 +4,17 @@ import { Link } from '@reach/router';
 const Header = () => (
   <header>
     <nav>
-      <Link to="/">Home</Link>
-      <Link to="search">Search</Link>
-      <Link to="gallery">Gallery</Link>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="search">Search</Link>
+        </li>
+        <li>
+          <Link to="gallery">Gallery</Link>
+        </li>
+      </ul>
     </nav>
   </header>
 );
