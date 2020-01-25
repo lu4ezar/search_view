@@ -1,0 +1,63 @@
+@import '../../variables.scss';
+
+nav {
+  font-size: 1.5rem;
+  background: $bgColor;
+  color: $linkTextColor;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+    @media (max-width: 599px) {
+      flex-direction: column;
+    }
+    &.collapsed {
+      li {
+        display: none;
+        @media (min-width: 600px) {
+          display: initial;
+        }
+      }
+      li.active {
+        display: initial;
+        width: 100%;
+        @media (min-width: 600px) {
+          width: auto;
+        }
+      }
+    }
+    li {
+      :hover {
+        color: $linkTextColor-hover;
+        background: $bgColor-hover;
+      }
+      &.active {
+        background: $bgColor-main;
+        color: $bgColor;
+        pointer-events: none;
+        border-bottom: 0.5rem solid $bgColor;
+      }
+    }
+    a {
+      @include link;
+    }
+  }
+  .icon-button {
+    background: $bgColor-main;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    cursor: pointer;
+    pointer-events: auto;
+    outline: none;
+    border: 2px solid $bgColor;
+    border-radius: 6px;
+    border-left: none;
+    border-right: none;
+    @media (min-width: 600px) {
+      display: none;
+    }
+  }
+}
