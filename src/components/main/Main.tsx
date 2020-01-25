@@ -1,17 +1,11 @@
 import React from 'react';
-import { Router } from '@reach/router';
-import Home from '../home';
-import Search from '../search';
-import Gallery from '../gallery';
-import NotFound from '../notFound';
+import Router from '../router';
+import './Main.scss';
 
 const Main = () => (
-  <Router>
-    <Home path="/" />
-    <Search path="search" />
-    <Gallery path="gallery" />
-    <NotFound default />
-  </Router>
+  <main>
+    <Router />
+  </main>
 );
 
 export default Main;
