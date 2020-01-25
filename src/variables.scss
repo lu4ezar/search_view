@@ -1,0 +1,18 @@
+$bgColor: #6a59b4;
+$bgColor-hover: #8270d1;
+$bgColor-main: #f0f8ff;
+$linkTextColor: #1c0d33;
+$linkTextColor-hover: #d5cfda;
+
+@mixin link {
+  display: block;
+  padding: 1.5rem;
+  color: $linkTextColor;
+  text-decoration: none;
+  font-weight: bold;
+  :visited,
+  :hover,
+  :active {
+    color: inherit;
+  }
+}
