@@ -1,0 +1,11 @@
+@import '../../variables.scss';
+
+main {
+  display: flex;
+  flex-grow: 1;
+  background: $bgColor-main;
+  font-weight: bold;
+  font-size: 2rem;
+  justify-content: center;
+  padding: 2rem;
+}
