@@ -4,8 +4,8 @@ import { ReactComponent as Menu } from '../../icons/menuIcon.svg';
 import { ReactComponent as Close } from '../../icons/closeIcon.svg';
 import './header.scss';
 
-const Header = () => {
-  const [active, setActive] = useState('/');
+const Header = ({ location }: { location: string }) => {
+  const [active, setActive] = useState(location);
   const [isCollapsed, setIsCollapsed] = useState(true);
   const chooseActiveTab = (tab: string) => {
     setActive(tab);
@@ -22,14 +22,14 @@ const Header = () => {
             <Link to="/">Home</Link>
           </li>
           <li
-            className={active === 'search' ? 'active' : ''}
-            onClick={() => chooseActiveTab('search')}
+            className={active === '/search' ? 'active' : ''}
+            onClick={() => chooseActiveTab('/search')}
           >
             <Link to="search">Search</Link>
           </li>
           <li
-            className={active === 'gallery' ? 'active' : ''}
-            onClick={() => chooseActiveTab('gallery')}
+            className={active === '/gallery' ? 'active' : ''}
+            onClick={() => chooseActiveTab('/gallery')}
           >
             <Link to="gallery">Gallery</Link>
           </li>

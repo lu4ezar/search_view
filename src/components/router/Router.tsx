@@ -8,8 +8,8 @@ import NotFound from '../notFound';
 const Router = () => (
   <ReachRouter>
     <Home path="/" />
-    <Search path="search" />
-    <Gallery path="gallery" />
+    <Search path="/search" />
+    <Gallery path="/gallery" />
     <NotFound default />
   </ReachRouter>
 );
