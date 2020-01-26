@@ -19,7 +19,7 @@ const Gallery = (props: RouteComponentProps) => {
   return (
     <>
       <Input
-        label="Enter picture URL"
+        label="Picture URL:"
         type="url"
         value={imageLink}
         onChange={setImageLink}
