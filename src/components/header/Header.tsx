@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from '@reach/router';
-import { ReactComponent as Menu } from '../../icons/menuIcon.svg';
-import { ReactComponent as Close } from '../../icons/closeIcon.svg';
+import { ReactComponent as Menu } from '../../img/menuIcon.svg';
+import { ReactComponent as Close } from '../../img/closeIcon.svg';
 import './header.scss';
 
 const Header = ({ location }: { location: string }) => {

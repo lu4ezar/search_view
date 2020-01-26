@@ -1,5 +1,5 @@
 import React from 'react';
-import placeholder from '../../../icons/placeholder.png';
+import placeholder from '../../../img/placeholder.png';
 import './Image.scss';
 
 const Image = ({ src }: { src: string }) => {
