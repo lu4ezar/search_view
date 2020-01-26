@@ -1,0 +1,16 @@
+@import '../../../variables.scss';
+
+.test-images {
+  display: flex;
+  width: 70vw;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 1rem auto;
+}
+
+.test-img-btn {
+  @include button;
+  font-size: 1rem;
+  margin: 0.1rem;
+  width: 3rem;
+}
