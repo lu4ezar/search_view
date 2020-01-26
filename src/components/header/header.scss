@@ -3,7 +3,7 @@
 nav {
   font-size: 1.5rem;
   background: $bgColor;
-  color: $linkTextColor;
+  color: $darkTextColor;
   ul {
     list-style-type: none;
     margin: 0;
@@ -30,7 +30,7 @@ nav {
     }
     li {
       :hover {
-        color: $linkTextColor-hover;
+        color: $darkTextColor-hover;
         background: $bgColor-hover;
       }
       &.active {
