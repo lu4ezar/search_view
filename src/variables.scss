@@ -16,3 +16,11 @@ $linkTextColor-hover: #d5cfda;
     color: inherit;
   }
 }
+
+@mixin button {
+  background: $bgColor-main;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid $bgColor;
+  border-radius: 6px;
+}
