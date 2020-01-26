@@ -2,8 +2,8 @@
 
 nav {
   font-size: 1.5rem;
-  background: $bgColor;
-  color: $darkTextColor;
+  background: $bg_dark;
+  color: $font_dark;
   ul {
     list-style-type: none;
     margin: 0;
@@ -29,15 +29,16 @@ nav {
       }
     }
     li {
+      border-bottom: 0.5rem solid transparent;
       :hover {
-        color: $darkTextColor-hover;
-        background: $bgColor-hover;
+        color: $font_dark__hover;
+        background: $bg_dark__hover;
       }
       &.active {
-        background: $bgColor-main;
-        color: $bgColor;
+        background: $bg_light;
+        color: $font_dark;
         pointer-events: none;
-        border-bottom: 0.5rem solid $bgColor;
+        border-bottom: 0.5rem solid $bg_dark;
       }
     }
     a {
@@ -45,7 +46,8 @@ nav {
     }
   }
   .icon-button {
-    @include button;
+    @include button($lightElement...);
+    background-color: $bg_light;
     position: absolute;
     right: 1.5rem;
     top: 1.5rem;
