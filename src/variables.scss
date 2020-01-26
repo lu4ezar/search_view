@@ -38,7 +38,7 @@ $testImageButton: ($font_dark, $font_light__hover, $bg_light, $bg_dark__hover);
   border-radius: 6px;
   transition: border 0.2s, color 0.2s, background-color 0.2s;
   outline: 0;
-  :hover {
+  &:hover {
     color: $fontHover;
     background: $bgHover;
     transition: border 0.2s, color 0.2s, background-color 0.2s;
