@@ -39,8 +39,9 @@ $testImageButton: ($font_dark, $font_light__hover, $bg_light, $bg_dark__hover);
   transition: border 0.2s, color 0.2s, background-color 0.2s;
   outline: 0;
   &:hover {
-    color: $fontHover;
+    color: $font_dark__hover;
     background: $bgHover;
+    border-color: $bg_dark;
     transition: border 0.2s, color 0.2s, background-color 0.2s;
   }
 }
