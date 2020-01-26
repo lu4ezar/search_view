@@ -1,7 +1,7 @@
 import React from 'react';
 import { Router as ReachRouter } from '@reach/router';
 import Home from '../home';
-import Search from '../search';
+import Search from '../search/root';
 import Gallery from '../gallery/root';
 import NotFound from '../notFound';
 
