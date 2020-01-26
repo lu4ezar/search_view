@@ -1,35 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from '@reach/router';
 import { ReactComponent as Menu } from '../../img/menuIcon.svg';
 import { ReactComponent as Close } from '../../img/closeIcon.svg';
-import './header.scss';
+import './Header.scss';
 
 const Header = ({ location }: { location: string }) => {
-  const [active, setActive] = useState(location);
+  const [activeTab, setActiveTab] = useState(location);
   const [isCollapsed, setIsCollapsed] = useState(true);
-  const chooseActiveTab = (tab: string) => {
-    setActive(tab);
+  const updateTab = (tab: string) => {
+    setActiveTab(tab);
     setIsCollapsed(true);
   };
+
+  // update Active Tab after redirect from 404
+  useEffect(() => {
+    location !== activeTab && updateTab(location);
+  }, [activeTab, location]);
+
   return (
     <header>
       <nav>
         <ul className={isCollapsed ? 'collapsed' : ''}>
           <li
-            className={active === '/' ? 'active' : ''}
-            onClick={() => chooseActiveTab('/')}
+            className={activeTab === '/' ? 'active' : ''}
+            onClick={() => updateTab('/')}
           >
             <Link to="/">Home</Link>
           </li>
           <li
-            className={active === '/search' ? 'active' : ''}
-            onClick={() => chooseActiveTab('/search')}
+            className={activeTab === '/search' ? 'active' : ''}
+            onClick={() => updateTab('/search')}
           >
             <Link to="search">Search</Link>
           </li>
           <li
-            className={active === '/gallery' ? 'active' : ''}
-            onClick={() => chooseActiveTab('/gallery')}
+            className={activeTab === '/gallery' ? 'active' : ''}
+            onClick={() => updateTab('/gallery')}
           >
             <Link to="gallery">Gallery</Link>
           </li>
