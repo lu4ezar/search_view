@@ -31,12 +31,12 @@ nav {
     li {
       border-bottom: 0.5rem solid transparent;
       :hover {
-        color: $font_dark__hover;
+        color: $bg_dark;
         background: $bg_dark__hover;
       }
       &.active {
-        background: $bg_light;
-        color: $font_dark;
+        background: $bg_dark__hover;
+        color: $font_light;
         pointer-events: none;
         border-bottom: 0.5rem solid $bg_dark;
       }
