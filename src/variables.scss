@@ -1,13 +1,25 @@
-$bgColor: #6a59b4;
-$bgColor-hover: #8270d1;
-$bgColor-main: #f0f8ff;
-$darkTextColor: #1c0d33;
-$darkTextColor-hover: #d5cfda;
+// font colors
+$font_light: #1c0d33;
+$font_light__hover: #d5cfda;
+$font_dark: #1c0d33;
+$font_dark__hover: #d5cfda;
+
+//bg colors
+$bg_light: #f0f8ff;
+$bg_light__hover: #fff;
+$bg_dark: #6a59b4;
+$bg_dark__hover: #8270d1;
+
+$lightElement: ($font_light, $font_light__hover, $bg_light, $bg_light__hover);
+
+$darkElement: ($font_light, $font_light__hover, $bg_dark, $bg_dark__hover);
+
+$testImageButton: ($font_dark, $font_light__hover, $bg_light, $bg_dark__hover);
 
 @mixin link {
   display: block;
   padding: 1.5rem;
-  color: $darkTextColor;
+  color: $font_dark;
   text-decoration: none;
   font-weight: bold;
   :visited,
@@ -17,10 +29,18 @@ $darkTextColor-hover: #d5cfda;
   }
 }
 
-@mixin button {
-  background: $bgColor-main;
+@mixin button($font, $fontHover, $bg, $bgHover) {
+  color: $font;
+  background: $bg;
   cursor: pointer;
   outline: none;
-  border: 2px solid $bgColor;
+  border: 2px solid $font;
   border-radius: 6px;
+  transition: border 0.2s, color 0.2s, background-color 0.2s;
+  outline: 0;
+  :hover {
+    color: $fontHover;
+    background: $bgHover;
+    transition: border 0.2s, color 0.2s, background-color 0.2s;
+  }
 }

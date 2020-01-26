@@ -9,7 +9,7 @@
 }
 
 .test-img-btn {
-  @include button;
+  @include button($testImageButton...);
   font-size: 1rem;
   margin: 0.1rem;
   width: 3rem;
