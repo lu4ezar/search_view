@@ -44,3 +44,7 @@ $testImageButton: ($font_dark, $font_light__hover, $bg_light, $bg_dark__hover);
     transition: border 0.2s, color 0.2s, background-color 0.2s;
   }
 }
+
+@mixin imageShadow {
+  box-shadow: -2px 2px 2px $font_dark;
+}
