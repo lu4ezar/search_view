@@ -24,9 +24,11 @@ const Input = ({ label, type, value, onChange, onSubmit }: InputProps) => {
   };
   return (
     <div className="input">
-      <label htmlFor={inputId}>{label}</label>
-      <input id={inputId} type={type} value={value} onChange={handleChange} />
-      <input type="submit" value="Ok" onClick={submitForm} />
+      <form>
+        <label htmlFor={inputId}>{label}</label>
+        <input id={inputId} type={type} value={value} onChange={handleChange} />
+        <input type="submit" value="Ok" onClick={submitForm} />
+      </form>
     </div>
   );
 };
