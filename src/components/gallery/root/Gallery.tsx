@@ -3,7 +3,7 @@ import { RouteComponentProps } from '@reach/router';
 import Input from '../../input';
 import Image from '../image';
 import './Gallery.scss';
-import TestImages from '../testImages/TestImages';
+import TestImages from '../testImages/';
 
 const getImagesToShow = (images: string[]) =>
   images.map((image, index) => <Image key={index} src={image} />);
@@ -16,9 +16,6 @@ const Gallery = (props: RouteComponentProps) => {
     setImages([url, ...images]);
     setImageLink('');
   };
-  const onImgLinkChange = (value: string) => {
-    setImageLink(value);
-  };
   return (
     <>
       <Input
@@ -28,7 +25,7 @@ const Gallery = (props: RouteComponentProps) => {
         onChange={setImageLink}
         onSubmit={addImageToGallery}
       />
-      <TestImages onClick={onImgLinkChange} onSubmit={addImageToGallery} />
+      <TestImages onClick={setImageLink} onSubmit={addImageToGallery} />
       <div className="gallery">{getImagesToShow(images)}</div>
     </>
   );
