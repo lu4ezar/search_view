@@ -47,5 +47,5 @@ $testImageButton: ($font_dark, $font_light__hover, $bg_light, $bg_dark__hover);
 }
 
 @mixin imageShadow {
-  box-shadow: -2px 2px 2px $font_dark;
+  box-shadow: 2px 2px 2px $font_dark;
 }
