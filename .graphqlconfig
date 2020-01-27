@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "search_view": {
+      "schemaPath": "schema.graphql",
+      "extensions": {
+        "endpoints": {
+          "default": "https://rickandmortyapi.com/graphql"
+        }
+      }
+    }
+  }
+}

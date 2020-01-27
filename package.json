@@ -22,6 +22,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "generate": "graphql-codegen",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -40,6 +41,8 @@
     ]
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^1.11.2",
+    "@graphql-codegen/typescript": "^1.11.2",
     "@types/reach__router": "^1.2.6"
   }
 }
