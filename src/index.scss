@@ -23,3 +23,15 @@ body,
   display: flex;
   flex-direction: column;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.main-header {
+  margin: 1rem;
+  display: flex;
+}
