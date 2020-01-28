@@ -7,7 +7,7 @@ const Image = ({ src }: { src: string }) => {
     backgroundImage: `url(${src}), url(${placeholder})`
   };
   return (
-    <div className="outer">
+    <div className="img-outer">
       <a
         href={src}
         target="_blank"
