@@ -1,39 +1,42 @@
 import React from 'react';
 import Image from '../../gallery/image';
 import './Card.scss';
+import { FetchData } from '../root/Search';
+import { Character, Query } from '../../../types';
 
-const Card = ({ isLoading, data, error }: any) => {
+const Card = ({ isLoading, data, error }: FetchData) => {
   const render = () => {
-    if (error) {
-      return <div>{error.message}</div>;
-    }
-    if (isLoading) {
-      return <div>Loading...</div>;
-    }
-    if (data.character) {
-      const { name, species, status, origin, image } = data.character;
-      return (
-        <div className="card">
-          <Image src={image} />
-          <div className="info">
-            <h4>{name}</h4>
-            <p>
-              <span>Species: </span>
-              {species}
-            </p>
-            <p>
-              <span>Status: </span>
-              {status}
-            </p>
-            <p>
-              <span>Origin: </span>
-              {origin?.name}
-            </p>
+    switch (true) {
+      case !!error:
+        return <div>{error}</div>;
+      case isLoading:
+        return <div>Loading...</div>;
+      case data != null:
+        const { name, species, status, origin, image } = (data as Query)
+          .character as Character;
+        return (
+          <div className="card">
+            <Image src={image as string} />
+            <div className="info">
+              <h4>{name}</h4>
+              <p>
+                <span>Species: </span>
+                {species}
+              </p>
+              <p>
+                <span>Status: </span>
+                {status}
+              </p>
+              <p>
+                <span>Origin: </span>
+                {origin?.name}
+              </p>
+            </div>
           </div>
-        </div>
-      );
+        );
+      default:
+        return null;
     }
-    return null;
   };
   const content = render();
   return <div className="card-outer">{content}</div>;
