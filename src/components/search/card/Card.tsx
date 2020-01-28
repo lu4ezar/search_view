@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from '../../gallery/image';
+import Image from '../../shared/image';
 import './Card.scss';
 import { FetchData } from '../root/Search';
 import { Character, Query } from '../../../types';

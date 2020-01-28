@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { RouteComponentProps } from '@reach/router';
-import Input from '../../input';
-import Image from '../image';
+import Input from '../../shared/input';
+import Image from '../../shared/image';
 import './Gallery.scss';
 import TestImages from '../testImages/';
 

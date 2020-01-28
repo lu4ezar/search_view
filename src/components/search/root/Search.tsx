@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { RouteComponentProps } from '@reach/router';
-import Input from '../../input';
+import Input from '../../shared/input';
 import Card from '../card';
 import { getQuery } from '../utils/query';
 import { Query } from '../../../types';
