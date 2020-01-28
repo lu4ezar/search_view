@@ -3,9 +3,9 @@
 footer {
   background: $bg_dark;
   font-size: 1rem;
-  padding: 1.5rem;
   text-align: end;
   @media (min-width: 600px) {
+    padding: 1.5rem;
     letter-spacing: 1rem;
     text-align: center;
   }
