@@ -16,8 +16,10 @@ const Gallery = (props: RouteComponentProps) => {
     setImages([url, ...images]);
     setImageLink('');
   };
+  const gallery = getImagesToShow(images);
   return (
-    <>
+    <div className="container">
+      <div className="main-header">Gallery</div>
       <Input
         label="Picture URL:"
         type="url"
@@ -26,8 +28,8 @@ const Gallery = (props: RouteComponentProps) => {
         onSubmit={addImageToGallery}
       />
       <TestImages onClick={setImageLink} onSubmit={addImageToGallery} />
-      <div className="gallery">{getImagesToShow(images)}</div>
-    </>
+      <div className="gallery">{gallery}</div>
+    </div>
   );
 };
 
