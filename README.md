@@ -15,12 +15,12 @@ npm run
 
 This app consists of 2 parts: 
 
-* [Part 1](https://lu4ezar.github.io/search)
+* Part 1 (direct links to app parts are temporarily unavailable)
 
 Search for Rick and Morty characters by number Id (up to 493) using [graphql endpoint](https://rickandmortyapi.com/).
 View result in simple Card component.
 
-* [Part 2](https://lu4ezar.github.io/gallery)
+* Part 2
 
 Enter Url to an image and enjoy your own little Gallery (3 picture in a row).
 For convenience, there is TestImages component with some hard-coded links to Splash images library.
