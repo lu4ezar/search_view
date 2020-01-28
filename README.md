@@ -11,7 +11,7 @@ npm run
 
 ### GH-pages:
 
-* [click here](https://lu4ezar.github.io/)
+* [click here](https://lu4ezar.github.io/search_view)
 
 This app consists of 2 parts: 
 
