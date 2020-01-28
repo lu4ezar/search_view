@@ -17,6 +17,11 @@
   }
 }
 
+// for Chrome
+input {
+  border-radius: 4px;
+}
+
 input[type='submit'] {
   @include button($lightElement...);
   border-color: transparent;
