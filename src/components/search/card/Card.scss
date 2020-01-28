@@ -17,6 +17,10 @@
   overflow: hidden;
   box-shadow: 0 4px 8px 0 $font_dark;
   transition: 0.2s;
+  @media (max-width: 599px) {
+    position: relative;
+    top: -10%;
+  }
   @media (min-width: 600px) {
     flex-direction: column;
   }
