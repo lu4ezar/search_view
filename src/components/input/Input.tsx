@@ -1,13 +1,13 @@
 import React from 'react';
 import './Input.scss';
 
-interface InputProps {
+type InputProps = {
   label: string;
   type: string;
   value: string;
   onChange: (value: string) => void;
   onSubmit: (value: string) => void;
-}
+};
 
 const Input = ({ label, type, value, onChange, onSubmit }: InputProps) => {
   const inputId = label.toLowerCase();
