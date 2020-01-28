@@ -14,7 +14,7 @@ $lightElement: ($font_dark, $font_dark__hover, $bg_light, $bg_light__hover);
 
 $darkElement: ($font_light, $font_light__hover, $bg_dark, $bg_dark__hover);
 
-$testImageButton: ($font_dark, $font_light__hover, $bg_light, $bg_dark__hover);
+$testImageButton: ($font_light, $font_dark, $bg_dark, $bg_dark__hover);
 
 @mixin link {
   display: block;
@@ -39,9 +39,9 @@ $testImageButton: ($font_dark, $font_light__hover, $bg_light, $bg_dark__hover);
   transition: border 0.2s, color 0.2s, background-color 0.2s;
   outline: 0;
   &:hover {
-    color: $font_dark__hover;
+    color: $fontHover;
     background: $bgHover;
-    border-color: $bg_dark;
+    border-color: $fontHover;
     transition: border 0.2s, color 0.2s, background-color 0.2s;
   }
 }
