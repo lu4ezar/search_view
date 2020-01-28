@@ -17,7 +17,7 @@ This app consists of 2 parts:
 
 * Part 1 (direct links to app parts are temporarily unavailable)
 
-Search for Rick and Morty characters by number Id (up to 493) using [graphql endpoint](https://rickandmortyapi.com/).
+Search for Rick and Morty characters by number Id (up to 493) using [graphql endpoint](https://rickandmortyapi.com/).\
 View result in simple Card component.
 
 * Part 2
