@@ -7,22 +7,22 @@
   font-size: initial;
   font-weight: initial;
   display: flex;
+  width: 85vw;
+  margin: 0 auto;
   align-items: center;
   justify-content: space-evenly;
   padding: 1rem;
+  form {
+    display: contents;
+  }
 }
 
 input[type='submit'] {
-  @include button($darkElement...);
+  @include button($lightElement...);
+  border-color: transparent;
   display: inline-block;
-  background-color: $bg_light;
   width: 4rem;
   font-weight: bold;
-  transition: border 0.2s, color 0.2s, background-color 0.2s;
-  &:hover {
-    color: $font_dark__hover;
-    background-color: $bg_light__hover;
-    border: 2px solid $font_dark__hover;
-    transition: border 0.2s, color 0.2s, background-color 0.2s;
-  }
+  margin: 0 1rem;
+  padding: 0.5rem;
 }
