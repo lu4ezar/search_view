@@ -32,6 +32,9 @@ body,
 }
 
 .main-header {
-  margin: 1rem;
-  display: flex;
+  display: none;
+  @media (min-width: 600px) {
+    display: flex;
+    margin: 1rem;
+  }
 }
