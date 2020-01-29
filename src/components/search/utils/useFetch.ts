@@ -41,12 +41,11 @@ const useFetch = (id: string, initialState = defaultInitialState) => {
           query: getQuery(id)
         })
       };
-      const response = await fetch(url, options);
-      const responseJSON = await response.json();
-      if ((responseJSON as Errors).errors) {
+      const response = await fetch(url, options).then(res => res.json());
+      if ((response as Errors).errors) {
         throw new Error('GraphQL Error');
       }
-      setData(responseJSON['data']);
+      setData(response['data']);
     } catch (err) {
       setError(err.message);
     } finally {
