@@ -1,22 +1,6 @@
 import { useState, useCallback } from 'react';
 import { getQuery } from '../queries/characterById';
-import { Query } from '../types';
-
-type Errors = {
-  errors: Error;
-};
-
-type Response = {
-  data: Query | Errors;
-};
-
-export type UseFetch = {
-  isLoading: boolean;
-  data: Response | null;
-  error: string | null;
-};
-
-export type FetchData = (id: string) => UseFetch | Promise<UseFetch>;
+import { FetchData } from '../types/UseFetch';
 
 const useFetch = () => {
   const [isLoading, setIsLoading] = useState(false);

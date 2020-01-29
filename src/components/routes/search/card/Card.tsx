@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from '../../../shared/image';
 import './Card.scss';
-import { UseFetch } from '../../../../hooks/useFetch';
+import { UseFetch } from '../../../../types/UseFetch';
 import { Character, Query } from '../../../../types';
 
 const Card = ({ isLoading, data, error }: UseFetch) => {
