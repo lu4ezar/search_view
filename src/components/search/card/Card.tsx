@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from '../../shared/image';
 import './Card.scss';
-import { FetchData } from '../root/Search';
+import { FetchData } from '../utils/useFetch';
 import { Character, Query } from '../../../types';
 
 const Card = ({ isLoading, data, error }: FetchData) => {
