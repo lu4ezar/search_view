@@ -1,8 +1,8 @@
 import React from 'react';
 import { Location } from '@reach/router';
-import Header from '../header';
-import Main from '../main';
-import Footer from '../footer';
+import Header from '../layout/header';
+import Main from '../layout/main';
+import Footer from '../layout/footer';
 
 const App: React.FC = () => {
   return (

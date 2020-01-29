@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
-import { getQuery } from './query';
-import { Query } from '../../../types';
+import { getQuery } from '../queries/characterById';
+import { Query } from '../types';
 
 type Errors = {
   errors: Error;

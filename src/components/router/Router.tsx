@@ -1,9 +1,9 @@
 import React from 'react';
 import { Router as ReachRouter } from '@reach/router';
-import Home from '../home';
-import Search from '../search/root';
-import Gallery from '../gallery/root';
-import NotFound from '../notFound';
+import Home from '../routes/home';
+import Search from '../routes/search/root';
+import Gallery from '../routes/gallery/root';
+import NotFound from '../routes/notFound';
 
 const Router = () => (
   <ReachRouter>

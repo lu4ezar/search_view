@@ -1,8 +1,8 @@
 import React from 'react';
-import Image from '../../shared/image';
+import Image from '../../../shared/image';
 import './Card.scss';
-import { UseFetch } from '../utils/useFetch';
-import { Character, Query } from '../../../types';
+import { UseFetch } from '../../../../hooks/useFetch';
+import { Character, Query } from '../../../../types';
 
 const Card = ({ isLoading, data, error }: UseFetch) => {
   const render = () => {

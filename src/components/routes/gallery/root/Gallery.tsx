@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { RouteComponentProps } from '@reach/router';
-import Input from '../../shared/input';
-import Image from '../../shared/image';
+import Input from '../../../shared/input';
+import Image from '../../../shared/image';
 import './Gallery.scss';
-import TestImages from '../testImages/';
+import TestImages from '../testImages';
 
 const getImagesToShow = (images: string[]) =>
   images.map((image, index) => <Image key={index} src={image} />);

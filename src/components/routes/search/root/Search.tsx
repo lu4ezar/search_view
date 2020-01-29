@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { RouteComponentProps } from '@reach/router';
-import Input from '../../shared/input';
+import Input from '../../../shared/input';
 import Card from '../card';
-import useFetch, { UseFetch, FetchData } from '../utils/useFetch';
+import useFetch, { UseFetch, FetchData } from '../../../../hooks/useFetch';
 
 const Search = (props: RouteComponentProps) => {
   const [id, setId] = useState('');
