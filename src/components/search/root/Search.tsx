@@ -7,17 +7,7 @@ import useFetch, { UseFetch, FetchData } from '../utils/useFetch';
 const Search = (props: RouteComponentProps) => {
   const [id, setId] = useState('');
 
-  const [{ isLoading, data, error }, fetchData]: any = useFetch(id, {
-    isLoading: false,
-    data: null as FetchData['data'],
-    error: null
-  });
-
-  const response = {
-    isLoading,
-    data,
-    error
-  };
+  const [data, fetchData] = useFetch();
 
   const onSubmit = () => {
     (fetchData as FetchData)(id);
