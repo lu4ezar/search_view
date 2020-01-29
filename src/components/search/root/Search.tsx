@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { RouteComponentProps } from '@reach/router';
 import Input from '../../shared/input';
 import Card from '../card';
-import useFetch, { FetchData } from '../utils/useFetch';
+import useFetch, { UseFetch, FetchData } from '../utils/useFetch';
 
 const Search = (props: RouteComponentProps) => {
   const [id, setId] = useState('');
@@ -20,7 +20,7 @@ const Search = (props: RouteComponentProps) => {
   };
 
   const onSubmit = () => {
-    fetchData(id, null);
+    (fetchData as FetchData)(id);
   };
 
   return (
@@ -33,7 +33,7 @@ const Search = (props: RouteComponentProps) => {
         onChange={setId}
         onSubmit={onSubmit}
       />
-      <Card {...response} />
+      <Card {...(data as UseFetch)} />
     </div>
   );
 };

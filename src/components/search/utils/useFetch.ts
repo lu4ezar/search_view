@@ -6,42 +6,24 @@ type Errors = {
   errors: Error;
 };
 
-type Data = {
-  data: Query;
+type Response = {
+  data: Query | Errors;
 };
 
-type GraphQLResponse = Data | Errors;
-
-export type FetchData = {
+export type UseFetch = {
   isLoading: boolean;
-  data: Data | null;
+  data: Response | null;
   error: string | null;
 };
 
-const defaultInitialState = {
-  isLoading: false,
-  data: null as FetchData['data'],
-  error: null as FetchData['error']
-};
+export type FetchData = (id: string) => UseFetch | Promise<UseFetch>;
 
 const useFetch = (id: string, initialState = defaultInitialState) => {
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
-  const fetchData = useCallback(async () => {
-    setIsLoading(true);
-    setError(null);
-    try {
-      const url = 'https://rickandmortyapi.com/graphql';
-      const options = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          query: getQuery(id)
-        })
-      };
-      const response = await fetch(url, options).then(res => res.json());
+  const fetchData: FetchData = useCallback(
       if ((response as Errors).errors) {
         throw new Error('GraphQL Error');
       }
