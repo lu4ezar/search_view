@@ -1,10 +1,10 @@
 import React from 'react';
 import Image from '../../shared/image';
 import './Card.scss';
-import { FetchData } from '../utils/useFetch';
+import { UseFetch } from '../utils/useFetch';
 import { Character, Query } from '../../../types';
 
-const Card = ({ isLoading, data, error }: FetchData) => {
+const Card = ({ isLoading, data, error }: UseFetch) => {
   const render = () => {
     switch (true) {
       case !!error:
