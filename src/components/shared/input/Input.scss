@@ -13,30 +13,30 @@
   margin: 0.2rem auto;
   align-items: center;
   justify-content: center;
+  padding: 0.25rem;
   @media (min-width: 600px) {
     padding: 1rem;
   }
   form {
     display: contents;
   }
-}
+  input {
+    margin: 0 0.5rem;
 
-input {
-  margin: 0 0.5rem;
+    // for Chrome
+    border-radius: 4px;
+  }
 
-  // for Chrome
-  border-radius: 4px;
-}
+  label {
+    margin: 0.2rem;
+  }
 
-label {
-  margin: 0.2rem;
-}
-
-input[type='submit'] {
-  @include button($lightElement...);
-  border-color: transparent;
-  display: inline-block;
-  width: 4rem;
-  font-weight: bold;
-  margin: 0.2rem;
+  input[type='submit'] {
+    @include button($lightElement...);
+    border-color: transparent;
+    display: inline-block;
+    width: 4rem;
+    font-weight: bold;
+    margin: 0.2rem;
+  }
 }
