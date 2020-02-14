@@ -3,6 +3,13 @@
 .gallery {
   display: grid;
   grid-template-areas: 'img img img';
-  justify-content: center;
-  align-items: center;
+  & .img-outer {
+    margin: 1vmin;
+  }
+  & .img {
+    width: 50vmin;
+    max-width: 30vmin;
+    height: 50vmin;
+    max-height: 30vmin;
+  }
 }

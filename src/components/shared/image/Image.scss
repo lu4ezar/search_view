@@ -1,19 +1,15 @@
 @import '../../../variables.scss';
 
 .img-outer {
-  padding: 1vmin;
+  background: center/cover no-repeat url(../../../img/placeholder.png);
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.img {
-  width: 50vmin;
-  max-width: 30vmin;
-  height: 50vmin;
-  max-height: 30vmin;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  @include imageShadow;
+  & > a {
+    display: contents;
+  }
+  & .img {
+    object-fit: cover;
+    @include imageShadow;
+  }
 }
