@@ -1,23 +1,17 @@
 import React from 'react';
-import placeholder from '../../../img/placeholder.png';
 import './Image.scss';
 
-const Image = ({ src }: { src: string }) => {
-  const styles = {
-    backgroundImage: `url(${src}), url(${placeholder})`
-  };
-  return (
-    <div className="img-outer">
-      <a
-        href={src}
-        target="_blank"
-        rel="noreferrer noopener"
-        title="view full image"
-      >
-        <div className="img" style={styles} />
-      </a>
-    </div>
-  );
-};
+const Image = ({ src }: { src: string }) => (
+  <div className="img-outer">
+    <a
+      href={src}
+      target="_blank"
+      rel="noreferrer noopener"
+      title="view full image"
+    >
+      <img key={src} className="img" src={src} alt="" />
+    </a>
+  </div>
+);
 
 export default Image;
