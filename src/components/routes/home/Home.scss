@@ -1,0 +1,57 @@
+@import '../../../variables.scss';
+
+.description {
+  min-height: 80%;
+  margin: 1vmin auto;
+  padding: 1vmin 3vmin;
+  overflow: auto;
+  font: initial;
+  background-color: $font_light;
+  color: $bg_dark;
+  font-weight: bold;
+  border: 2px solid $font_dark;
+  word-break: break-word;
+  @media (min-width: 1024px) {
+    width: 50vw;
+  }
+  p {
+    text-indent: 1rem;
+    line-height: 2rem;
+  }
+  a,
+  span {
+    color: $font_dark;
+  }
+  em {
+    color: $font_light__hover;
+  }
+  a {
+    @include link;
+    display: inline;
+    padding: 0;
+    text-decoration: underline overline;
+    line-height: 1.2;
+    &:hover {
+      vertical-align: middle;
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    list-style-type: none;
+  }
+  code {
+    margin: auto;
+    padding: 1vmin;
+    background-color: $font_dark;
+    color: $font_light;
+    display: block;
+    border-radius: 6px;
+    text-indent: initial;
+    @media (min-width: 1024px) {
+      width: 60%;
+    }
+  }
+}
