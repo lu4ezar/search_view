@@ -16,7 +16,7 @@ const Router = () => (
     <Route path="/gallery">
       <Gallery />
     </Route>
-    <Route path="*">
+    <Route>
       <NotFound />
     </Route>
   </Switch>
