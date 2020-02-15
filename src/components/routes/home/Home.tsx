@@ -1,9 +1,9 @@
 import React from 'react';
-import { RouteComponentProps, Link } from '@reach/router';
+import { Link } from 'react-router-dom';
 import './Home.scss';
 
-const Home = (props: RouteComponentProps) => (
-  <>
+const Home = () => (
+  <div className="container">
     <div className="main-header">Home</div>
     <article className="description">
       <p>
@@ -16,8 +16,8 @@ const Home = (props: RouteComponentProps) => (
         </a>
         . <a href="https://sass-lang.com/">SCSS</a> was used for styling.
         Navigation was implemented with{' '}
-        <a href="https://reach.tech/router">Reach Router</a>. No state
-        management tools were involved, just{' '}
+        <a href="https://github.com/ReactTraining/react-router">React Router</a>
+        . No state management tools were involved, just{' '}
         <a href="https://reactjs.org/docs/hooks-reference.html#usestate">
           useState
         </a>{' '}
@@ -73,7 +73,7 @@ const Home = (props: RouteComponentProps) => (
         </li>
       </ul>
     </article>
-  </>
+  </div>
 );
 
 export default Home;

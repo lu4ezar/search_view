@@ -1,8 +1,8 @@
 import React from 'react';
-import { RouteComponentProps, Link } from '@reach/router';
+import { Link } from 'react-router-dom';
 import './NotFound.scss';
 
-const ErrorPage = (props: RouteComponentProps) => (
+const ErrorPage = () => (
   <div className="container not-found">
     <div>Not Found</div>
     <div className="home-link">
