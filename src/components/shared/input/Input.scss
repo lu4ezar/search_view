@@ -14,11 +14,11 @@
   align-items: center;
   justify-content: center;
   padding: 0.25rem 0;
-  @media (max-width: 599px) {
+  @media (max-width: 767px) {
     width: 100vw;
     border-radius: 0;
   }
-  @media (min-width: 600px) {
+  @media (min-width: 768px) {
     padding: 1rem;
   }
   form {

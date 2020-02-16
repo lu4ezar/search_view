@@ -16,12 +16,12 @@
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px 0 $font_dark;
-  @media (max-width: 599px) {
+  @media (max-width: 767px) {
     position: relative;
     top: -10%;
     margin: 0 0.1rem;
   }
-  @media (min-width: 600px) {
+  @media (min-width: 768px) {
     flex-direction: column;
   }
   &:hover {
@@ -35,13 +35,13 @@
     border: none;
     width: 40vmin;
     height: 40vmin;
-    @media (max-width: 599px) {
+    @media (max-width: 767px) {
       border-right: 3px solid $font_dark;
       max-width: 100%;
       max-height: 100%;
     }
 
-    @media (min-width: 600px) {
+    @media (min-width: 768px) {
       border-bottom: 3px solid $font_dark;
     }
   }
