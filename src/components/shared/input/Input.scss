@@ -1,7 +1,7 @@
 @import '../../../variables.scss';
 
 .input {
-  color: $font_dark;
+  color: $font_light;
   background-color: $bg_dark;
   border-radius: 8px;
   font-size: 1rem;
@@ -37,9 +37,7 @@
   }
 
   input[type='submit'] {
-    @include button($lightElement...);
-    border-color: transparent;
-    display: inline-block;
+    @include button($input_submit...);
     width: 4rem;
     font-weight: bold;
     margin: 0.2rem;
