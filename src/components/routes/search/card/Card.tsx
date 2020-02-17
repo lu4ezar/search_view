@@ -8,7 +8,7 @@ const Card = ({ isLoading, data, error }: UseFetch) => {
   const render = () => {
     switch (true) {
       case !!error:
-        return <div>{error}</div>;
+        return <div className="error">{error}</div>;
       case isLoading:
         return <div>Loading...</div>;
       case data != null:
