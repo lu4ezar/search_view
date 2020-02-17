@@ -21,7 +21,8 @@ const Header = () => {
 
   return (
     <header>
-      <nav>
+      <div className="container">
+        <nav>
           <Links />
           <div className="nav-mobile">
             <NavButton onClick={onClick} collapsed={isCollapsed} />
@@ -32,6 +33,7 @@ const Header = () => {
             )}
           </div>
         </nav>
+      </div>
     </header>
   );
 };
