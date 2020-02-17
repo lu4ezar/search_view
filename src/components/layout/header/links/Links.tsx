@@ -1,8 +1,9 @@
 import React from 'react';
 import { NavLink as Link } from 'react-router-dom';
+import './Links.scss';
 
 const Links = () => (
-  <div>
+  <div className="links">
     <Link exact to="/" activeClassName="active">
       Home
     </Link>
