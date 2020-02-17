@@ -5,7 +5,7 @@ import './Gallery.scss';
 import TestImages from '../testImages';
 
 const getImagesToShow = (images: string[]) =>
-  images.map((image, index) => <Image key={index} src={image} />);
+  images.map(image => <Image key={image} src={image} />);
 
 const Gallery = () => {
   const [images, setImages] = useState([] as string[]);
