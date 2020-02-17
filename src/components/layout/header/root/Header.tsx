@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Header.scss';
-import NavButton from './navButton';
-import Links from './links';
+import NavButton from '../navButton';
+import Links from '../links';
 
 const Header = () => {
   const [isCollapsed, setIsCollapsed] = useState(true);
