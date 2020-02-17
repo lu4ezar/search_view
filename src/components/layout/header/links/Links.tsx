@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink as Link } from 'react-router-dom';
 
 const Links = () => (
-  <>
+  <div>
     <Link exact to="/" activeClassName="active">
       Home
     </Link>
@@ -12,7 +12,7 @@ const Links = () => (
     <Link exact to="gallery" activeClassName="active">
       Gallery
     </Link>
-  </>
+  </div>
 );
 
 export default Links;
