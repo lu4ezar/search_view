@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { ReactComponent as Menu } from '../../../img/menuIcon.svg';
 import { ReactComponent as Close } from '../../../img/closeIcon.svg';
 import './Header.scss';
+import Links from './links';
 
 const Header = () => {
   const location = useLocation()['pathname'];
@@ -21,33 +22,16 @@ const Header = () => {
   return (
     <header>
       <nav>
-        <ul className={isCollapsed ? 'collapsed' : ''}>
-          <li
-            className={activeTab === '/' ? 'active' : ''}
-            onClick={() => updateTab('/')}
-          >
-            <Link to="/">Home</Link>
-          </li>
-          <li
-            className={activeTab === '/search' ? 'active' : ''}
-            onClick={() => updateTab('/search')}
-          >
-            <Link to="search">Search</Link>
-          </li>
-          <li
-            className={activeTab === '/gallery' ? 'active' : ''}
-            onClick={() => updateTab('/gallery')}
-          >
-            <Link to="gallery">Gallery</Link>
-          </li>
-        </ul>
-        <button
-          className="icon-button"
-          onClick={() => setIsCollapsed(!isCollapsed)}
-        >
-          {isCollapsed ? <Menu /> : <Close />}
-        </button>
-      </nav>
+          <Links />
+          <div className="nav-mobile">
+            <NavButton onClick={onClick} collapsed={isCollapsed} />
+            {!isCollapsed && (
+              <div className="mobile-menu" onClick={onClick}>
+                <Links />
+              </div>
+            )}
+          </div>
+        </nav>
     </header>
   );
 };
