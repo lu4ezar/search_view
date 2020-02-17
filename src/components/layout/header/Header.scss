@@ -1,61 +1,59 @@
 @import '../../../variables.scss';
 
-nav {
+header {
+  display: flex;
+  width: 100%;
+  position: relative;
   font-size: 1.5rem;
   background: $bg_dark;
   color: $font_dark;
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  letter-spacing: 0.5rem;
+  padding: 1rem 0 0;
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+  nav {
     display: flex;
-    position: relative;
-    @media (max-width: 599px) {
-      flex-direction: column;
-    }
-    &.collapsed {
-      li {
-        display: none;
-        @media (min-width: 600px) {
-          display: initial;
-        }
-      }
-      li.active {
-        display: initial;
-        width: 100%;
-        @media (min-width: 600px) {
-          width: auto;
-        }
-      }
-    }
-    li {
-      border-bottom: 0.5rem solid transparent;
-      :hover {
-        color: $bg_dark;
-        background: $bg_dark__hover;
-      }
-      &.active {
-        background: $bg_dark__hover;
-        color: $font_light;
-        pointer-events: none;
-        border-bottom: 0.5rem solid $bg_dark;
-      }
-    }
-    a {
-      @include link;
+    @media (max-width: 767px) {
+      justify-content: flex-end;
     }
   }
-  .icon-button {
-    @include button($lightElement...);
-    background-color: $bg_light;
-    position: absolute;
-    right: 1.5rem;
-    top: 1.5rem;
-    pointer-events: auto;
-    border-left: none;
-    border-right: none;
-    @media (min-width: 768px) {
+  a {
+    @include link;
+    transition: 0.2s;
+    &.active,
+    &:hover {
+      background: $bg_light;
+      transition: 0.2s;
+    }
+    &.active {
+      pointer-events: none;
+    }
+    @media (max-width: 767px) {
       display: none;
     }
   }
+}
+
+.nav-mobile {
+  a {
+    display: flex;
+    justify-content: center;
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $bg_dark;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 100vh;
+  width: 100vw;
 }

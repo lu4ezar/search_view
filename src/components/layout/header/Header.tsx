@@ -4,12 +4,9 @@ import NavButton from './navButton';
 import Links from './links';
 
 const Header = () => {
-  const location = useLocation()['pathname'];
-  const [activeTab, setActiveTab] = useState(location);
   const [isCollapsed, setIsCollapsed] = useState(true);
-  const updateTab = (tab: string) => {
-    setActiveTab(tab);
-    setIsCollapsed(true);
+  const onClick = () => {
+    setIsCollapsed(!isCollapsed);
   };
   return (
     <header>
