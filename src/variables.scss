@@ -21,6 +21,7 @@ $testImageButton: ($font_light, $font_dark, $bg_dark, $bg_dark__hover);
   padding: 1.5rem;
   color: $font_dark;
   text-decoration: none;
+  outline: none;
   font-weight: bold;
   :visited,
   :hover,
