@@ -1,16 +1,19 @@
 @import '../../../variables.scss';
 
 .description {
-  min-height: 80%;
-  margin: 1vmin auto;
+  height: 100%;
   padding: 1vmin 3vmin;
   overflow: auto;
-  font: initial;
+  font-size: 1rem;
   background-color: $font_light;
   color: $bg_dark;
   font-weight: bold;
-  border: 2px solid $font_dark;
   word-break: break-word;
+  @media (min-width: 768px) {
+    height: 80%;
+    margin: 1vmin auto;
+    border: 2px solid $font_dark;
+  }
   @media (min-width: 1024px) {
     width: 50vw;
   }
