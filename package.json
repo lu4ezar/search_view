@@ -45,8 +45,8 @@
     ]
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "1.21.6",
-    "@graphql-codegen/typescript": "1.22.4",
+    "@graphql-codegen/cli": "1.21.8",
+    "@graphql-codegen/typescript": "1.23.0",
     "gh-pages": "3.2.3"
   }
 }
